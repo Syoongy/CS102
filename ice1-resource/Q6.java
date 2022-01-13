@@ -30,13 +30,19 @@ public class Q6 {
             currCh = str2.charAt(i) + "";
             // We check if str1 contains the current character
             if (str1.contains(currCh)) {
+                // We search for the index of the matching character starting from the previous
+                // character index
                 nextIdx = str1.indexOf(currCh, prevIdx);
-                System.out.println(nextIdx - prevIdx);
                 if (nextIdx - prevIdx > 1) {
+                    // If the difference between the previous and next character is greater than 1,
+                    // we want to add n-1 spaces before the character
                     textToPrint += " ".repeat(nextIdx - prevIdx - 1) + currCh;
                 } else if (nextIdx != 0) {
+                    // If the difference is less than 1 and the character is not the first one in
+                    // the String, we want to add 1 space before the character
                     textToPrint += " " + currCh;
                 } else {
+                    // The character is the first one in the String
                     textToPrint += currCh;
                 }
                 prevIdx = nextIdx;

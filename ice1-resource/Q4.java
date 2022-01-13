@@ -13,7 +13,8 @@ public class Q4 {
         System.out.print("Enter number: ");
         inputVal = sc.nextInt();
         sc.nextLine();
-
+        
+        // Check if the first value is positive
         if (inputVal > 0) {
             while (inputVal > 0) {
                 totalVal *= inputVal;
