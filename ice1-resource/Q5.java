@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Q5 {
     public static void main(String[] args) {
-        partC();
+        partA();
     }
 
     public static void partA() {
@@ -14,11 +14,12 @@ public class Q5 {
         inputVal = sc.nextInt();
 
         for (int i = 0; i < inputVal; i++) {
-            if ((int) c > 122) {
-                c = 'a';
-            }
-            System.out.print(c + " ");
-            ++c;
+            // if ((int) c > 122) {
+            // c = 'a';
+            // }
+            // System.out.print(c + " ");
+            // ++c;
+            System.out.print((char) ('a' + i % 26) + " ");
         }
 
         sc.close();
