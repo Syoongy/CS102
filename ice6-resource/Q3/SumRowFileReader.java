@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.Scanner;
 
-public class SumFileReader {
+public class SumRowFileReader {
 
     public static Scanner getFileScanner(Scanner inputSc) {
         System.out.print("Enter filename > ");
@@ -18,15 +18,20 @@ public class SumFileReader {
         Scanner inputSc = new Scanner(System.in);
         Scanner fileSc = null;
         int totalVal = 0;
+        String[] columns;
 
         while (fileSc == null) {
             fileSc = getFileScanner(inputSc);
         }
 
         while (fileSc.hasNext()) {
-            totalVal += fileSc.nextInt();
+            columns = fileSc.nextLine().split(",");
+            totalVal = 0;
+            for (int i = 0; i < columns.length; i++) {
+                totalVal += Integer.parseInt(columns[i]);
+            }
+            System.out.println(totalVal);
         }
-        System.out.printf("The sum is %d%n", totalVal);
 
         inputSc.close();
         fileSc.close();
