@@ -22,7 +22,7 @@ public class InventoryApp {
             System.out.printf("There are %d products with a total value of $%.2f to be sold.%n", totalVal, totalPrice);
 
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            // Method does nothing if the filename is invalid
         }
     }
 
