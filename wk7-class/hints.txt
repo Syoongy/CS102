@@ -1,0 +1,2 @@
+1) overloading only cares for methodName + values being read in. Will not be changed if one throws an error and the other does not
+2) Throwable is a checked exception
