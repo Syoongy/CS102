@@ -35,8 +35,10 @@ public class CheckScoreMenu {
 
     public void checkScore() {
         Scanner sc = new Scanner(System.in);
+
         System.out.print("Enter the student's name > ");
         String studentName = sc.nextLine();
+        
         System.out.print("Enter the quiz name > ");
         String quizName = sc.nextLine();
 

@@ -34,10 +34,11 @@ public class SearchMenu {
     }
 
     public void searchPresident() {
-
         Scanner sc = new Scanner(System.in);
+
         System.out.print("Enter the Interest Group's name > ");
         String IGName = sc.nextLine();
+        
         System.out.print("Enter the year > ");
         int year = sc.nextInt();
 
