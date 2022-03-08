@@ -21,17 +21,37 @@ public class CheckScoreMenu {
             display();
             choice = sc.nextInt();
             switch (choice) {
-                case 1 :
+                case 1:
                     checkScore();
                     break;
-                case 2 :
+                case 2:
                     System.out.println("bye bye");
                     break;
-                default :
+                default:
                     System.out.println("Enter a choice between 1 to 2");
             }
         } while (choice != 2);
     }
 
+    public void checkScore() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the student's name > ");
+        String studentName = sc.nextLine();
+        System.out.print("Enter the quiz name > ");
+        String quizName = sc.nextLine();
 
+        try {
+            double retDiff = ctrl.calculateDifferenceFromAverage(studentName, quizName);
+            if (retDiff == 0.0) {
+                System.out.println(String.format("%s is sitting on the fence!%n", studentName));
+            } else if (retDiff < 0.0) {
+                System.out
+                        .println(String.format("%s is %.1f marks below the average%n", studentName, Math.abs(retDiff)));
+            } else {
+                System.out.println(String.format("%s is %.1f marks above the average%n", studentName, retDiff));
+            }
+        } catch (IllegalArgumentException e) {
+            System.out.println(e.getMessage());
+        }
+    }
 }
