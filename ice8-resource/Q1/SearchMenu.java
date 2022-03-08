@@ -48,8 +48,8 @@ public class SearchMenu {
             char presGender = retStudent.getGender();
 
             System.out
-                    .println(String.format("The president %s is a %s%n", presName,
-                            presGender == 'M' ? "gentleman" : "lady"));
+                    .printf("The president %s is a %s%n%n", presName,
+                            presGender == 'M' ? "gentleman" : "lady");
         } else {
             System.out.println("Invalid Interest Group/Year entered.\n");
         }

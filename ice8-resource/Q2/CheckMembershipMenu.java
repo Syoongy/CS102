@@ -44,14 +44,14 @@ public class CheckMembershipMenu {
         int duration = ctrl.checkMembershipDuration(studentName, teamName);
         switch (duration) {
             case 0:
-                System.out.println(String.format("%s joined the team when the team is formed.%n", studentName));
+                System.out.printf("%s joined the team when the team is formed.%n%n", studentName);
                 break;
             case -1:
-                System.out.println(String.format("%s is not in team %s.%n", studentName, teamName));
+                System.out.printf("%s is not in team %s.%n", studentName, teamName);
                 break;
             default:
-                System.out.println(String.format("%s joined the team %d days after the team is formed.%n", studentName,
-                        duration));
+                System.out.printf("%s joined the team %d days after the team is formed.%n", studentName,
+                        duration);
                 break;
         }
     }

@@ -43,12 +43,12 @@ public class CheckScoreMenu {
         try {
             double retDiff = ctrl.calculateDifferenceFromAverage(studentName, quizName);
             if (retDiff == 0.0) {
-                System.out.println(String.format("%s is sitting on the fence!%n", studentName));
+                System.out.printf("%s is sitting on the fence!%n%n", studentName);
             } else if (retDiff < 0.0) {
                 System.out
-                        .println(String.format("%s is %.1f marks below the average%n", studentName, Math.abs(retDiff)));
+                        .printf("%s is %.1f marks below the average%n%n", studentName, Math.abs(retDiff));
             } else {
-                System.out.println(String.format("%s is %.1f marks above the average%n", studentName, retDiff));
+                System.out.printf("%s is %.1f marks above the average%n%n", studentName, retDiff);
             }
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
