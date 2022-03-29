@@ -72,21 +72,8 @@ public class NumberUtils {
         // return retList;
         // }
 
-        // Iterator<Map.Entry<Integer, Integer>> entryIterator =
-        // freqMap.entrySet().iterator();
-        // while (entryIterator.hasNext()) {
-
-        // int currKey = entryIterator.next().getKey();
-        // int diffFromValue = Math.abs(currKey - value);
-        // if (freqMap.containsKey(diffFromValue)) {
-        // int frequency = freqMap.get(diffFromValue);
-        // for (int i = 0; i < frequency; i++) {
-        // retList.add(new Pair(diffFromValue, currKey));
-        // }
-        // }
-        // entryIterator.remove();
-
-        // }
+        // loop through arr and use abs diff in value
+        // get this and then remove the value used
 
         for (int i = 0; i < arr.length; i++) {
             for (int j = i + 1; j < arr.length; j++) {
