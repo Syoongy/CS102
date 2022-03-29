@@ -1,5 +1,3 @@
-import java.util.concurrent.ThreadPoolExecutor.DiscardOldestPolicy;
-
 public class Adder {
     public static void main(String[] args) {
         String displayStr = "";
@@ -13,8 +11,11 @@ public class Adder {
                 // TODO: handle exception
             }
         }
-        
-        displayStr = displayStr.substring(0, displayStr.length() - 2) + "= " + sum;
+
+        if (displayStr.length() > 3) {
+            displayStr = displayStr.substring(0, displayStr.length() - 2) + "= " + sum;
+        }
+
         System.out.println(displayStr);
     }
 }
